@@ -16,6 +16,7 @@
 		2C1206EA2C29CF1200914C9F /* ShareLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1206E92C29CF1200914C9F /* ShareLinkView.swift */; };
 		2C1206EC2C29CFBD00914C9F /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1206EB2C29CFBD00914C9F /* PhotoPickerView.swift */; };
 		2C1206EE2C29D19D00914C9F /* AppStoreReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1206ED2C29D19D00914C9F /* AppStoreReviewView.swift */; };
+		2C1206F02C2AA68D00914C9F /* ModifyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1206EF2C2AA68D00914C9F /* ModifyImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2C1206E92C29CF1200914C9F /* ShareLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinkView.swift; sourceTree = "<group>"; };
 		2C1206EB2C29CFBD00914C9F /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		2C1206ED2C29D19D00914C9F /* AppStoreReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewView.swift; sourceTree = "<group>"; };
+		2C1206EF2C2AA68D00914C9F /* ModifyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				2C1206D72C29BA1D00914C9F /* InstafilterApp.swift */,
 				2C1206D92C29BA1D00914C9F /* ContentView.swift */,
+				2C1206EF2C2AA68D00914C9F /* ModifyImageView.swift */,
 				2C1206E92C29CF1200914C9F /* ShareLinkView.swift */,
 				2C1206ED2C29D19D00914C9F /* AppStoreReviewView.swift */,
 				2C1206E52C29C82300914C9F /* UnavailableView.swift */,
@@ -158,6 +161,7 @@
 				2C1206E62C29C82300914C9F /* UnavailableView.swift in Sources */,
 				2C1206EA2C29CF1200914C9F /* ShareLinkView.swift in Sources */,
 				2C1206EE2C29D19D00914C9F /* AppStoreReviewView.swift in Sources */,
+				2C1206F02C2AA68D00914C9F /* ModifyImageView.swift in Sources */,
 				2C1206E82C29CA0C00914C9F /* ImageModifierView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
