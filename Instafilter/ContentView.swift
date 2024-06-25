@@ -43,21 +43,29 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                HStack {
-                    Text("Intensity")
-                    Slider(value: $filterIntensity)
-                        .onChange(of: filterIntensity, applyProcessing)
-                }
-                
-                HStack {
-                    Button("Change Filter", action: changeFilter)
+                VStack {
+                    HStack {
+                        Text("Intensity")
+                            .foregroundStyle(Color(white: 0.0, opacity: processedImage == nil ? 0.25 : 1.0))
+                        Slider(value: $filterIntensity)
+                            .onChange(of: filterIntensity, applyProcessing)
+                    }
                     
-                    Spacer()
                     
-                    if let processedImage {
-                        ShareLink(item: processedImage, preview: SharePreview("Instafilter image", image: processedImage))
+                    HStack {
+                        Button("Change Filter", action: changeFilter)
+                        
+                        Spacer()
+                        
+                        if let processedImage {
+                            ShareLink(item: processedImage, preview: SharePreview("Instafilter image", image: processedImage))
+                        }
                     }
                 }
+                .disabled(processedImage == nil)
+
+                
+                Spacer()
             }
             .padding([.horizontal, .bottom])
             .navigationTitle("Instafilter")
@@ -124,7 +132,7 @@ struct ContentView: View {
         loadImage()
         
         filterCount += 1
-        if filterCount >= 5 {
+        if filterCount >= 20 {
             requestReview()
         }
     }
