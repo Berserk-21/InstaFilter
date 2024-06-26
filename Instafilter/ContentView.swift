@@ -98,6 +98,9 @@ struct ContentView: View {
                 Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
                 Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
                 Button("Vignette") { setFilter(CIFilter.vignette()) }
+                Button("Gloom") { setFilter(CIFilter.gloom()) }
+                Button("Bloom") { setFilter(CIFilter.bloom()) }
+                Button("Pointillize") { setFilter(CIFilter.pointillize()) }
                 Button("Cancel", role: .cancel) {}
             }
         }
@@ -137,22 +140,24 @@ struct ContentView: View {
         
         if inputKeys.contains(kCIInputRadiusKey) {
             
-            var multiplicator: CGFloat = 20.0
+            var value: CGFloat = filterRadius
             
             if let filterName = currentFilter.attributes["CIAttributeFilterName"] as? String {
                 switch filterName {
                 case "CIVignette":
-                    multiplicator = 2.0
+                    value *= 2.0
                 case "CICrystallize":
-                    multiplicator = 200.0
+                    value *= 200.0
                 case "CIGaussianBlur":
-                    multiplicator = 50.0
+                    value *= 50.0
+                case "CIPointillize":
+                    value = (max(1, value * 20))
                 default:
-                    multiplicator = 20.0
+                    value *= 20.0
                 }
             }
             
-            currentFilter.setValue(filterRadius * multiplicator, forKey: kCIInputRadiusKey)
+            currentFilter.setValue(value, forKey: kCIInputRadiusKey)
         }
         
         guard let outputImage = currentFilter.outputImage else { return }
